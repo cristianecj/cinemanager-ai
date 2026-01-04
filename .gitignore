@@ -1,0 +1,37 @@
+# --- Python General ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Entornos Virtuales (¡Muy Importante!) ---
+# Nunca se suben, pesan mucho y son específicos de tu máquina
+cine_env/
+venv/
+.venv/
+env/
+
+# --- macOS (Basura del sistema) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Archivos de Configuración y Secretos ---
+# Aquí es donde guardarás tu API Key para no hardcodearla en el script
+.env
+config.py
+
+# --- Datos Locales del Proyecto (Videoteca) ---
+# No quieres subir la lista de TUS películas al repo
+.cine_manifest.json
+cine_manifest.json
+lista_para_gemini.txt
+correcciones.json
+
+# --- Logs y Errores ---
+*.log
+ffprobe_error.log
+
+# --- IDEs (Opcional, si usas VS Code o PyCharm) ---
+.vscode/
+.idea/
