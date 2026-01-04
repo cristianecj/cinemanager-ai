@@ -122,3 +122,28 @@ python3 gestor_cine_master.py "/Ruta/A/Tus/Peliculas" run
 **La IA pone el nombre en Inglés pero yo quería Español**
 
 - **Solución:** Cambia la variable `IDIOMA_TITULO = "es"` en el script.
+
+## 🧹 Limpieza y Desinstalación
+
+Cuando termines de usar la herramienta, es recomendable desactivar el entorno virtual.
+
+**1. Salir del entorno (Desactivar):**
+Simplemente ejecuta:
+
+```bash
+deactivate
+
+```
+
+_Verás que el prefijo `(cine_env)` desaparece de tu terminal._
+
+**2. Eliminar el entorno (Opcional):**
+Si ya no necesitas la herramienta y quieres liberar espacio (borrar las librerías descargadas):
+
+```bash
+# Asegúrate de estar fuera del entorno primero (deactivate)
+rm -rf cine_env
+
+```
+
+_Esto no borrará tus scripts ni tu videoteca, solo las librerías de Python._
