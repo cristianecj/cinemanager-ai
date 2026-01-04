@@ -1,6 +1,10 @@
 # 🎬 CineManager AI (Gestor de Videoteca)
 
-Herramienta de automatización en Python que estandariza, renombra y audita bibliotecas de películas locales utilizando **FFmpeg** para análisis técnico y **Google Gemini (IA)** para normalización de metadatos.
+<p align="center">
+  <img src="assets/output.gif" alt="Demo funcionando" width="100%">
+</p>
+
+> **Gestor de Videoteca Inteligente:** Automatiza, renombra y audita tu colección de películas usando Google Gemini y FFmpeg.
 
 ## 🚀 Características
 
@@ -73,6 +77,19 @@ python3 gestor_cine_master.py "/Ruta/A/Tus/Peliculas" run
 
 ```
 
+### Ejemplo de Salida
+
+```text
+1. Escaneando directorio...
+   Pendientes de procesar: 12
+
+>>> Consultando IA (Lote 1)...
+   Cambio: Matrix.avi -> The Matrix (1999) [SD][XviD][Ingles].avi
+   Cambio: toy_story_1.mp4 -> Toy Story (1995) [720p][x264][Latino].mp4
+
+✅ Manifiesto actualizado.
+```
+
 ## 🧠 Lógica de Decisión (Flujo)
 
 1. **Escaneo:** Recorre la carpeta recursivamente.
@@ -93,12 +110,15 @@ python3 gestor_cine_master.py "/Ruta/A/Tus/Peliculas" run
 ## ❓ Solución de Problemas
 
 **Error: `429 RESOURCE_EXHAUSTED`**
-* **Causa:** Has superado el límite de peticiones gratuitas de Google (15 RPM).
-* **Solución:** El script entrará automáticamente en modo "Enfriamiento" y esperará 65 segundos antes de reintentar. No cierres la terminal, solo espera.
+
+- **Causa:** Has superado el límite de peticiones gratuitas de Google (15 RPM).
+- **Solución:** El script entrará automáticamente en modo "Enfriamiento" y esperará 65 segundos antes de reintentar. No cierres la terminal, solo espera.
 
 **Error: `[ERROR-METADATA]` en el nombre del archivo**
-* **Causa:** `ffprobe` no pudo leer el archivo de video.
-* **Solución:** Verifica que el archivo no esté corrupto y que tengas FFmpeg instalado (`brew install ffmpeg`).
+
+- **Causa:** `ffprobe` no pudo leer el archivo de video.
+- **Solución:** Verifica que el archivo no esté corrupto y que tengas FFmpeg instalado (`brew install ffmpeg`).
 
 **La IA pone el nombre en Inglés pero yo quería Español**
-* **Solución:** Cambia la variable `IDIOMA_TITULO = "es"` en el script.
+
+- **Solución:** Cambia la variable `IDIOMA_TITULO = "es"` en el script.
