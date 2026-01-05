@@ -23,6 +23,7 @@
 - Linux: `apt install ffmpeg`
 
 3. **API Key de Google Gemini** (Google AI Studio).
+[Obténla en Google AI Studio](https://aistudio.google.com/app/api-keys)
 
 ## 🛠 Instalación
 
